@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <title>ProMan - Personal Portfolio HTML Template</title>
+    <title>Sergio Giovanni HOUNSOU - Portfolio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="text-primary fw-bold m-0">ProMan</h1>
+            <h1 class="text-primary fw-bold m-0" data-i18n="brand.name">Sergio</h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
                 <a href="#service" class="nav-item nav-link" data-i18n="nav.services">Services</a>
             </div>
             <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
-                <h1 class="text-primary fw-bold m-0">ProMan</h1>
+                <h1 class="text-primary fw-bold m-0" data-i18n="brand.name">Sergio</h1>
             </a>
             <div class="navbar-nav me-auto py-0">
                 <a href="#project" class="nav-item nav-link" data-i18n="nav.projects">Projects</a>
@@ -68,7 +68,7 @@
             </div>
             <div class="navbar-nav ms-3">
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">Language</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">FR / EN</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
                         <li><button class="dropdown-item lang-option" type="button" data-lang="en" data-i18n="nav.english">English</button></li>
                         <li><button class="dropdown-item lang-option" type="button" data-lang="fr" data-i18n="nav.french">French</button></li>
@@ -86,15 +86,19 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
                     <h3 class="text-primary mb-3" data-i18n="hero.im">I'm</h3>
-                    <h1 class="display-3 mb-3">Sergio Giovanni HOUNSOU</h1>
+                    <h1 class="display-3 mb-3" data-i18n="hero.name">Sergio Giovanni HOUNSOU</h1>
                     <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none" data-i18n-typed="hero.typed">Développeurfull Web Desi</div>
+                    <div class="typed-text d-none" data-i18n-typed="hero.typed">Développeur full-Stack</div>
                     <div class="d-flex align-items-center pt-5">
-                        <a href="" class="btn btn-primary py-3 px-4 me-5" data-i18n="hero.download">Download CV</a>
+                        <a href="assets/CV_Sergio_HOUNSOU.pdf" class="btn btn-primary py-3 px-4 me-5" data-i18n="hero.download" download>Telecharger CV</a>
                         <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                         <h5 class="ms-4 mb-0 d-none d-sm-block" data-i18n="hero.play">Play</h5>
+                    </div>
+                    <div class="d-flex align-items-center mt-4 hero-social">
+                        <a class="btn btn-square btn-primary me-2" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-square btn-primary" href="https://www.linkedin.com/in/sergio-giovanni-hounsou-a72410268" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -133,36 +137,36 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="d-flex align-items-center mb-5">
                         <div class="years flex-shrink-0 text-center me-4">
-                            <h1 class="display-1 mb-0">15</h1>
-                            <h5 class="mb-0" data-i18n="about.years">Years</h5>
+                            <h1 class="display-1 mb-0">03</h1>
+                            <h5 class="mb-0" data-i18n="about.years">Annees</h5>
                         </div>
-                        <h3 class="lh-base mb-0" data-i18n="about.experience">of working experience as a web designer & developer</h3>
+                        <h3 class="lh-base mb-0" data-i18n="about.experience">d'experience en developpement web</h3>
                     </div>
-                    <p class="mb-4" data-i18n="about.p1">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i><span data-i18n="about.prices">Afordable Prices</span></p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i><span data-i18n="about.quality">High Quality Product</span></p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i><span data-i18n="about.ontime">On Time Project Delivery</span></p>
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="" data-i18n="about.readMore">Read More</a>
+                    <p class="mb-4" data-i18n="about.p1">Je suis developpeur web en formation a l'IUT d'Anglet, en France. Curieux, rigoureux et passionne, je conçois des sites modernes et performants adaptes aux besoins des utilisateurs.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i><span data-i18n="about.teamwork">Travail d'equipe</span></p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i><span data-i18n="about.organization">Organisation et autonomie</span></p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i><span data-i18n="about.communication">Communication claire</span></p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="#contact" data-i18n="about.readMore">En savoir plus</a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0" data-i18n="about.happy">Happy Clients</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                        <h5 class="border-end pe-3 me-3 mb-0" data-i18n="about.happy">Stages realises</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">3</h2>
                     </div>
-                    <p class="mb-4" data-i18n="about.p2">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <p class="mb-4" data-i18n="about.p2">Je transforme des idees en projets concrets en combinant technique, creativite et sens du detail.</p>
                     <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0" data-i18n="about.projects">Projects Completed</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                        <h5 class="border-end pe-3 me-3 mb-0" data-i18n="about.projects">Projets realises</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">6</h2>
                     </div>
-                    <p class="mb-0" data-i18n="about.p3">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <p class="mb-0" data-i18n="about.p3">Langues : francais et anglais. Centres d'interet : jeux video, sports et lecture.</p>
                 </div>
             </div>
         </div>
@@ -175,18 +179,18 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5" data-i18n="skills.title">Skills & Experience</h1>
-                    <p class="mb-4" data-i18n="skills.p1">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
+                    <h1 class="display-5 mb-5" data-i18n="skills.title">Competences & Experience</h1>
+                    <p class="mb-4" data-i18n="skills.p1">Je maitrise les fondamentaux du front-end et du back-end, avec une attention a la qualite et aux bonnes pratiques.</p>
                     <h3 class="mb-4" data-i18n="skills.subtitle">My Skills</h3>
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">HTML</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
@@ -200,40 +204,40 @@
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">PHP</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
+                                    <h6 class="font-weight-bold">JavaScript</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Javascript</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
+                                    <h6 class="font-weight-bold">PHP</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Angular JS</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
+                                    <h6 class="font-weight-bold">Laravel</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Wordpress</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
+                                    <h6 class="font-weight-bold">Django / Vue.js</h6>
+                                    <h6 class="font-weight-bold">75%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -252,56 +256,44 @@
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row gy-5 gx-4">
                                 <div class="col-sm-6">
-                                    <h5 data-i18n="skills.uiDesigner">UI Designer</h5>
+                                    <h5 data-i18n="exp.khc.title">Stage Developpement Web</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
+                                    <p class="text-primary mb-1" data-i18n="exp.khc.date">2023 - 2024</p>
+                                    <h6 class="mb-0" data-i18n="exp.khc.company">Kapital Humain & Conseils, Cotonou</h6>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5 data-i18n="skills.productDesigner">Product Designer</h5>
+                                    <h5 data-i18n="exp.gfc.title">Stage Professionnel - Developpement Web</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
+                                    <p class="text-primary mb-1" data-i18n="exp.gfc.date">2025</p>
+                                    <h6 class="mb-0" data-i18n="exp.gfc.company">Global Freedom Corporation, Cotonou</h6>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5 data-i18n="skills.webDesigner">Web Designer</h5>
+                                    <h5 data-i18n="exp.egb.title">Stage - Initiation au Developpement Web</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="skills.appsDesigner">Apps Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
+                                    <p class="text-primary mb-1" data-i18n="exp.egb.date">2022</p>
+                                    <h6 class="mb-0" data-i18n="exp.egb.company">e-gbavou, Cotonou</h6>
                                 </div>
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row gy-5 gx-4">
                                 <div class="col-sm-6">
-                                    <h5 data-i18n="skills.uiCourse">UI Design Course</h5>
+                                    <h5 data-i18n="edu.but.title">BUT 3 Informatique</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
+                                    <p class="text-primary mb-1" data-i18n="edu.but.date">2025</p>
+                                    <h6 class="mb-0" data-i18n="edu.but.school">UPPA/IUT Bayonne et Pays de l'Adour</h6>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5 data-i18n="skills.iosDev">IOS Development</h5>
+                                    <h5 data-i18n="edu.licence.title">Licence Informatique</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
+                                    <p class="text-primary mb-1" data-i18n="edu.licence.date">2024</p>
+                                    <h6 class="mb-0" data-i18n="edu.licence.school">ENEAM - Cotonou, Benin</h6>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5 data-i18n="skills.webDesign">Web Design</h5>
+                                    <h5 data-i18n="edu.bac.title">Baccalaureat Scientifique D</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="skills.appsDesign">Apps Design</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
+                                    <p class="text-primary mb-1" data-i18n="edu.bac.date">2020</p>
+                                    <h6 class="mb-0" data-i18n="edu.bac.school">College Catholique St Michel, Cotonou</h6>
                                 </div>
                             </div>
                         </div>
@@ -318,10 +310,10 @@
         <div class="container">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0" data-i18n="service.title">My Services</h1>
+                    <h1 class="display-5 mb-0" data-i18n="service.title">Ce que je propose</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="" data-i18n="service.cta">Hire Me</a>
+                    <a class="btn btn-primary py-3 px-5" href="#contact" data-i18n="service.cta">Disponible</a>
                 </div>
             </div>
             <div class="row g-4">
@@ -331,9 +323,9 @@
                             <i class="fa fa-crop-alt fa-2x text-dark"></i>
                         </div>
                         <div class="ms-sm-4">
-                            <h4 class="mb-3" data-i18n="service.creative">Creative Design</h4>
-                            <h6 class="mb-3" data-i18n-html="service.price">Start from <span class="text-primary">$199</span></h6>
-                            <span data-i18n="service.p1">Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                            <h4 class="mb-3" data-i18n="service.webapp">Applications web</h4>
+                            <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
+                            <span data-i18n="service.p1">Developpement d'applications web modernes, from scratch ou en reprise, avec une architecture claire.</span>
                         </div>
                     </div>
                 </div>
@@ -343,9 +335,9 @@
                             <i class="fa fa-code-branch fa-2x text-dark"></i>
                         </div>
                         <div class="ms-sm-4">
-                            <h4 class="mb-3" data-i18n="service.graphic">Graphic Design</h4>
-                            <h6 class="mb-3" data-i18n-html="service.price">Start from <span class="text-primary">$199</span></h6>
-                            <span data-i18n="service.p2">Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                            <h4 class="mb-3" data-i18n="service.front">Integration front-end</h4>
+                            <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
+                            <span data-i18n="service.p2">Interfaces responsives, accessibles et animees avec HTML, CSS, JavaScript et Bootstrap.</span>
                         </div>
                     </div>
                 </div>
@@ -355,9 +347,9 @@
                             <i class="fa fa-code fa-2x text-dark"></i>
                         </div>
                         <div class="ms-sm-4">
-                            <h4 class="mb-3" data-i18n="service.web">Web Design</h4>
-                            <h6 class="mb-3" data-i18n-html="service.price">Start from <span class="text-primary">$199</span></h6>
-                            <span data-i18n="service.p3">Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                            <h4 class="mb-3" data-i18n="service.backend">Back-end & bases de donnees</h4>
+                            <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
+                            <span data-i18n="service.p3">APIs, logique metier, modelisation UML et gestion de donnees avec MySQL.</span>
                         </div>
                     </div>
                 </div>
@@ -367,9 +359,9 @@
                             <i class="fa fa-laptop-code fa-2x text-dark"></i>
                         </div>
                         <div class="ms-sm-4">
-                            <h4 class="mb-3" data-i18n="service.uiux">UI/UX Design</h4>
-                            <h6 class="mb-3" data-i18n-html="service.price">Start from <span class="text-primary">$199</span></h6>
-                            <span data-i18n="service.p4">Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                            <h4 class="mb-3" data-i18n="service.uiux">UI/UX & maquettes</h4>
+                            <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
+                            <span data-i18n="service.p4">Conception de maquettes claires et parcours utilisateurs efficaces.</span>
                         </div>
                     </div>
                 </div>
@@ -384,24 +376,28 @@
         <div class="container">
             <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0" data-i18n="projects.title">My Projects</h1>
+                    <h1 class="display-5 mb-0" data-i18n="projects.title">Mes projets</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                        <li class="mx-3 active" data-filter="*" data-i18n="projects.all">All Projects</li>
-                        <li class="mx-3" data-filter=".first" data-i18n="projects.uiux">UI/UX Design</li>
-                        <li class="mx-3" data-filter=".second" data-i18n="projects.graphic">Graphic Design</li>
+                        <li class="mx-3 active" data-filter="*" data-i18n="projects.all">Tous</li>
+                        <li class="mx-3" data-filter=".first" data-i18n="projects.webapps">Applications web</li>
+                        <li class="mx-3" data-filter=".second" data-i18n="projects.websites">Sites web</li>
                     </ul>
                 </div>
             </div>
             <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
+                        <img class="img-fluid" src="img/project-2.jpg" alt="">
                         <div class="portfolio-btn">
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
                         </div>
+                    </div>
+                    <div class="portfolio-caption bg-white p-3">
+                        <h5 class="mb-1" data-i18n="projects.kpayroll">K-Payroll</h5>
+                        <small class="text-muted" data-i18n="projects.kpayroll.stack">Django, Vue.js, MySQL</small>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item second">
@@ -409,8 +405,12 @@
                         <img class="img-fluid" src="img/project-2.jpg" alt="">
                         <div class="portfolio-btn">
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
                         </div>
+                    </div>
+                    <div class="portfolio-caption bg-white p-3">
+                        <h5 class="mb-1" data-i18n="projects.kprospects">K-Prospects</h5>
+                        <small class="text-muted" data-i18n="projects.kprospects.stack">Laravel, Bootstrap, MySQL</small>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item first">
@@ -418,35 +418,47 @@
                         <img class="img-fluid" src="img/project-3.jpg" alt="">
                         <div class="portfolio-btn">
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
                         </div>
+                    </div>
+                    <div class="portfolio-caption bg-white p-3">
+                        <h5 class="mb-1" data-i18n="projects.gfc">Global Freedom Corporation</h5>
+                        <small class="text-muted" data-i18n="projects.gfc.stack">Laravel, Bootstrap</small>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item second">
                     <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-4.jpg" alt="">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
                         <div class="portfolio-btn">
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
                         </div>
+                    </div>
+                    <div class="portfolio-caption bg-white p-3">
+                        <h5 class="mb-1" data-i18n="projects.egbavou">Maquette site e-gbavou</h5>
+                        <small class="text-muted" data-i18n="projects.egbavou.stack">HTML, CSS, JavaScript</small>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-5.jpg" alt="">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
                         <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
                         </div>
+                    </div>
+                    <div class="portfolio-caption bg-white p-3">
+                        <h5 class="mb-1" data-i18n="projects.university">Projet universitaire</h5>
+                        <small class="text-muted" data-i18n="projects.university.stack">UML, MySQL, documentation</small>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item second">
                     <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-6.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                    </div>
+                    <div class="portfolio-caption bg-white p-3">
+                        <h5 class="mb-1" data-i18n="projects.portfolio">Portfolio personnel</h5>
+                        <small class="text-muted" data-i18n="projects.portfolio.stack">HTML, CSS, JavaScript</small>
                     </div>
                 </div>
             </div>
@@ -460,20 +472,20 @@
         <div class="container">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0" data-i18n="team.title">Team Members</h1>
+                    <h1 class="display-5 mb-0" data-i18n="team.title">Centres d'interet</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="" data-i18n="team.cta">Contact Us</a>
+                    <a class="btn btn-primary py-3 px-5" href="#contact" data-i18n="team.cta">Me contacter</a>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative">
-                        <img class="img-fluid rounded" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid rounded" src="img/interest-gaming.png" alt="">
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
-                                <h5 data-i18n="team.name">Full Name</h5>
-                                <span data-i18n="team.role">Designer</span>
+                                <h5 data-i18n="team.interest1">Jeux video</h5>
+                                <span data-i18n="team.interest1.desc">Esprit d'analyse et strategie</span>
                             </div>
                             <i class="fa fa-arrow-right fa-2x text-primary"></i>
                         </div>
@@ -481,11 +493,11 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative">
-                        <img class="img-fluid rounded" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid rounded" src="img/interest-sports.png" alt="">
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
-                                <h5 data-i18n="team.name">Full Name</h5>
-                                <span data-i18n="team.role">Designer</span>
+                                <h5 data-i18n="team.interest2">Sports</h5>
+                                <span data-i18n="team.interest2.desc">Energie, discipline et perseverance</span>
                             </div>
                             <i class="fa fa-arrow-right fa-2x text-primary"></i>
                         </div>
@@ -493,11 +505,11 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative">
-                        <img class="img-fluid rounded" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid rounded" src="img/interest-travel.png" alt="">
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
-                                <h5 data-i18n="team.name">Full Name</h5>
-                                <span data-i18n="team.role">Designer</span>
+                                <h5 data-i18n="team.interest3">Lecture</h5>
+                                <span data-i18n="team.interest3.desc">Curiosite et apprentissage continu</span>
                             </div>
                             <i class="fa fa-arrow-right fa-2x text-primary"></i>
                         </div>
@@ -512,13 +524,13 @@
     <!-- Testimonial Start -->
     <div class="container-fluid bg-light py-5 my-5" id="testimonial">
         <div class="container-fluid py-5">
-            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" data-i18n="testimonial.title">Testimonial</h1>
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" data-i18n="testimonial.title">Ce que j'apporte</h1>
             <div class="row justify-content-center">
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="testimonial-left h-100">
                         <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-1.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -530,42 +542,42 @@
                                     <i class="fa fa-quote-left text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-5 fst-italic" data-i18n="testimonial.p1">Rigueur, sens du detail et respect des delais pour des livrables propres et maintenables.</p>
                             <hr class="w-25 mx-auto">
-                            <h5 data-i18n="testimonial.name">Client Name</h5>
-                            <span data-i18n="testimonial.role">Profession</span>
+                            <h5 data-i18n="testimonial.name1">Qualite</h5>
+                            <span data-i18n="testimonial.role1">Focus sur l'excellence</span>
                         </div>
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
                                 <div class="testimonial-icon">
                                     <i class="fa fa-quote-left text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-5 fst-italic" data-i18n="testimonial.p2">Ecoute active et collaboration pour transformer les besoins en solutions claires.</p>
                             <hr class="w-25 mx-auto">
-                            <h5 data-i18n="testimonial.name">Client Name</h5>
-                            <span data-i18n="testimonial.role">Profession</span>
+                            <h5 data-i18n="testimonial.name2">Collaboration</h5>
+                            <span data-i18n="testimonial.role2">Communication fluide</span>
                         </div>
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
                                 <div class="testimonial-icon">
                                     <i class="fa fa-quote-left text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-5 fst-italic" data-i18n="testimonial.p3">Curiosite et veille continue pour progresser et proposer des solutions modernes.</p>
                             <hr class="w-25 mx-auto">
-                            <h5 data-i18n="testimonial.name">Client Name</h5>
-                            <span data-i18n="testimonial.role">Profession</span>
+                            <h5 data-i18n="testimonial.name3">Apprentissage</h5>
+                            <span data-i18n="testimonial.role3">Evolution constante</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="testimonial-right h-100">
                         <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-1.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -579,33 +591,31 @@
         <div class="container py-5">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0" data-i18n="contact.title">Let's Work Together</h1>
+                    <h1 class="display-5 mb-0" data-i18n="contact.title">Travaillons ensemble</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="" data-i18n="contact.cta">Say Hello</a>
+                    <a class="btn btn-primary py-3 px-5" href="mailto:sergiovanni100@gmail.com" data-i18n="contact.cta">Dire bonjour</a>
                 </div>
             </div>
             <div class="row g-5">
                 <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="mb-2" data-i18n="contact.office">My office:</p>
-                    <h3 class="fw-bold">123 Street, New York, USA</h3>
+                    <h3 class="fw-bold" data-i18n="contact.location">Anglet, France</h3>
                     <hr class="w-100">
                     <p class="mb-2" data-i18n="contact.call">Call me:</p>
-                    <h3 class="fw-bold">+012 345 6789</h3>
+                    <h3 class="fw-bold">+33 7 46 29 50 85</h3>
                     <hr class="w-100">
                     <p class="mb-2" data-i18n="contact.mail">Mail me:</p>
-                    <h3 class="fw-bold">info@example.com</h3>
+                    <h3 class="fw-bold">sergiovanni100@gmail.com</h3>
                     <hr class="w-100">
                     <p class="mb-2" data-i18n="contact.follow">Follow me:</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/sergio-giovanni-hounsou-a72410268" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="mb-4" data-i18n-html="contact.formNote">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <p class="mb-4" data-i18n-html="contact.formNote">Le formulaire est en cours d'activation. Vous pouvez deja me contacter par email ou via LinkedIn.</p>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -648,7 +658,7 @@
     <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container-xxl pt-5 px-0">
             <div class="bg-dark">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                <iframe src="https://maps.google.com/maps?q=Anglet%2C%20France&output=embed"
                     frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
@@ -661,13 +671,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <span data-i18n-html="footer.rights">&copy; <a class="border-bottom text-secondary" href="#">Your Site Name</a>, All Right Reserved.</span>
+                    <span data-i18n-html="footer.rights">&copy; <a class="border-bottom text-secondary" href="#">Sergio Giovanni HOUNSOU</a>, Tous droits reserves.</span>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    <span data-i18n="footer.designed">Designed By</span> <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
-                    <br><span data-i18n="footer.distributed">Distributed By:</span> <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                </div>
+                <div class="col-md-6 text-center text-md-end"></div>
             </div>
         </div>
     </div>
