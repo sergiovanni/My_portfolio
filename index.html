@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css?v=29" rel="stylesheet">
+    <link href="css/style.css?v=35" rel="stylesheet">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -239,83 +239,39 @@
             <div class="row g-5">
 
                 <!-- ── Compétences ── -->
-                <div class="col-lg-6">
+                <div class="col-lg-6 skill-col-stretch">
                     <h1 class="display-5 mb-2" data-i18n="skills.title">Competences & Experience</h1>
                     <p class="mb-5" data-i18n="skills.p1">Je maitrise les fondamentaux du front-end et du back-end, avec une attention a la qualite et aux bonnes pratiques.</p>
-                    <h4 class="skills-subtitle mb-4" data-i18n="skills.subtitle">My Skills</h4>
-                    <div class="skills-grid">
 
-                        <div class="skill-card-new">
-                            <div class="skill-icon-wrap s-html"><i class="fab fa-html5"></i></div>
-                            <div class="skill-content">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="skill-label">HTML5</span>
-                                    <span class="skill-pct">90%</span>
-                                </div>
-                                <div class="skill-track"><div class="skill-fill" aria-valuenow="90"></div></div>
+                    <div class="soft-skills-card">
+                        <h4 class="soft-skills-card-title"><i class="bi bi-lightning-charge-fill"></i><span data-i18n="skills.subtitle">Soft Skills</span></h4>
+                        <div class="soft-skills-list">
+                            <div class="soft-skill-row">
+                                <span class="soft-skill-row-icon"><i class="bi bi-people-fill"></i></span>
+                                <span data-i18n="softskills.team">Esprit d'equipe</span>
+                            </div>
+                            <div class="soft-skill-row">
+                                <span class="soft-skill-row-icon"><i class="bi bi-bullseye"></i></span>
+                                <span data-i18n="softskills.rigor">Rigueur</span>
+                            </div>
+                            <div class="soft-skill-row">
+                                <span class="soft-skill-row-icon"><i class="bi bi-arrow-repeat"></i></span>
+                                <span data-i18n="softskills.adapt">Adaptabilite</span>
+                            </div>
+                            <div class="soft-skill-row">
+                                <span class="soft-skill-row-icon"><i class="bi bi-kanban-fill"></i></span>
+                                <span data-i18n="softskills.organized">Organisation</span>
+                            </div>
+                            <div class="soft-skill-row">
+                                <span class="soft-skill-row-icon"><i class="bi bi-chat-dots-fill"></i></span>
+                                <span data-i18n="softskills.communication">Communication</span>
                             </div>
                         </div>
-
-                        <div class="skill-card-new">
-                            <div class="skill-icon-wrap s-css"><i class="fab fa-css3-alt"></i></div>
-                            <div class="skill-content">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="skill-label">CSS3</span>
-                                    <span class="skill-pct">85%</span>
-                                </div>
-                                <div class="skill-track"><div class="skill-fill" aria-valuenow="85"></div></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-card-new">
-                            <div class="skill-icon-wrap s-js"><i class="fab fa-js"></i></div>
-                            <div class="skill-content">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="skill-label">JavaScript</span>
-                                    <span class="skill-pct">85%</span>
-                                </div>
-                                <div class="skill-track"><div class="skill-fill" aria-valuenow="85"></div></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-card-new">
-                            <div class="skill-icon-wrap s-php"><i class="fab fa-php"></i></div>
-                            <div class="skill-content">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="skill-label">PHP</span>
-                                    <span class="skill-pct">80%</span>
-                                </div>
-                                <div class="skill-track"><div class="skill-fill" aria-valuenow="80"></div></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-card-new">
-                            <div class="skill-icon-wrap s-laravel"><i class="fab fa-laravel"></i></div>
-                            <div class="skill-content">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="skill-label">Laravel</span>
-                                    <span class="skill-pct">80%</span>
-                                </div>
-                                <div class="skill-track"><div class="skill-fill" aria-valuenow="80"></div></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-card-new">
-                            <div class="skill-icon-wrap s-vue"><i class="fab fa-vuejs"></i></div>
-                            <div class="skill-content">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="skill-label">Django / Vue.js</span>
-                                    <span class="skill-pct">75%</span>
-                                </div>
-                                <div class="skill-track"><div class="skill-fill" aria-valuenow="75"></div></div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
                 <!-- ── Expérience & Formation ── -->
-                <div class="col-lg-6">
+                <div class="col-lg-6 skill-col-stretch">
                     <ul class="skill-tabs nav mb-4">
                         <li class="nav-item">
                             <button class="nav-link skill-tab-btn active" data-bs-toggle="pill" data-bs-target="#tab-1" type="button">
@@ -332,6 +288,14 @@
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show active p-0">
                             <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-date" data-i18n="exp.conciergerie.date">2026</span>
+                                        <h5 data-i18n="exp.conciergerie.title">Developpeur Full-Stack (Stage)</h5>
+                                        <p class="timeline-company" data-i18n="exp.conciergerie.company">La Cle Du Confort (Conciergerie Lara), France</p>
+                                    </div>
+                                </div>
                                 <div class="timeline-item">
                                     <div class="timeline-dot"></div>
                                     <div class="timeline-card">
@@ -517,6 +481,167 @@
         </div>
     </div>
     <!-- Tech Marquee End -->
+
+
+    <!-- Tech Levels Start -->
+    <div class="tech-levels-section">
+        <div class="container">
+            <div class="tech-levels-grid">
+
+                <div class="tech-level-card">
+                    <span class="tech-level-badge badge-a" data-i18n="techlevels.languages">Langages</span>
+                    <div class="tech-level-rows">
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">JavaScript <i class="bi bi-star-fill"></i></span>
+                                <span class="tech-level-score">5/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 100%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">HTML / CSS <i class="bi bi-star-fill"></i></span>
+                                <span class="tech-level-score">5/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 100%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Python</span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">PHP</span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Java</span>
+                                <span class="tech-level-score">3/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-level-card">
+                    <span class="tech-level-badge badge-b" data-i18n="techlevels.frameworks">Frameworks</span>
+                    <div class="tech-level-rows">
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Laravel <i class="bi bi-star-fill"></i></span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">React.js</span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Vue.js</span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Next.js</span>
+                                <span class="tech-level-score">3/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 60%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Django</span>
+                                <span class="tech-level-score">3/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-level-card">
+                    <span class="tech-level-badge badge-c" data-i18n="techlevels.databases">Bases de donnees</span>
+                    <div class="tech-level-rows">
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">SQL <i class="bi bi-star-fill"></i></span>
+                                <span class="tech-level-score">5/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 100%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">MySQL</span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">PostgreSQL</span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">MongoDB</span>
+                                <span class="tech-level-score">3/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-level-card">
+                    <span class="tech-level-badge badge-d" data-i18n="techlevels.tools">Outils & Methodes</span>
+                    <div class="tech-level-rows">
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Git <i class="bi bi-star-fill"></i></span>
+                                <span class="tech-level-score">5/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 100%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Agile / Scrum</span>
+                                <span class="tech-level-score">4/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Docker</span>
+                                <span class="tech-level-score">3/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 60%"></div></div>
+                        </div>
+                        <div class="tech-level-row">
+                            <div class="tech-level-row-top">
+                                <span class="tech-level-name">Figma</span>
+                                <span class="tech-level-score">3/5</span>
+                            </div>
+                            <div class="tech-level-bar"><div class="tech-level-fill" style="width: 60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Tech Levels End -->
 
 
     <!-- Service Start -->
@@ -928,7 +1053,7 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=7"></script>
 
     <!-- 3D Effects Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -936,7 +1061,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/effects3d.js?v=17"></script>
+    <script src="js/effects3d.js?v=20"></script>
 </body>
 
 </html>

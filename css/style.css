@@ -835,6 +835,99 @@ a { color: var(--primary); text-decoration: none; }
     .tech-marquee-track { animation-duration: 40s; }
 }
 
+/* ─── Tech Levels ─── */
+.tech-levels-section {
+    background: var(--dark);
+    padding: 3rem 0;
+}
+
+.tech-levels-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.tech-level-card {
+    background: var(--dark-3);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: 20px 18px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.tech-level-card:hover {
+    border-color: rgba(0, 212, 255, 0.35);
+    transform: translateY(-4px);
+}
+
+.tech-level-badge {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.badge-a, .badge-b, .badge-c, .badge-d {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.tech-level-row { margin-bottom: 13px; }
+.tech-level-row:last-child { margin-bottom: 0; }
+
+.tech-level-row-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.tech-level-name {
+    color: var(--light);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.tech-level-name i {
+    color: #ffc94d;
+    font-size: 0.55rem;
+    margin-left: 4px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 4px rgba(255, 201, 77, 0.6));
+}
+
+.tech-level-score {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tech-level-bar {
+    height: 4px;
+    background: var(--glass);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tech-level-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+@media (max-width: 991.98px) {
+    .tech-levels-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 575.98px) {
+    .tech-levels-grid { grid-template-columns: 1fr; }
+}
+
 /* ─── About ─── */
 #about { background: var(--dark-2); padding: 6rem 0; }
 
@@ -935,39 +1028,7 @@ a { color: var(--primary); text-decoration: none; }
     border-radius: 2px;
 }
 
-/* ── Skill cards ── */
-.skills-grid { display: flex; flex-direction: column; gap: 12px; }
-
-.skill-card-new {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: var(--dark-3);
-    border: 1px solid var(--glass-border);
-    border-radius: 14px;
-    padding: 14px 18px;
-    transition: all 0.3s ease;
-    cursor: default;
-}
-
-.skill-card-new:hover {
-    border-color: rgba(0, 212, 255, 0.4);
-    background: rgba(0, 212, 255, 0.04);
-    transform: translateX(8px);
-    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.08);
-}
-
-.skill-icon-wrap {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.35rem;
-}
-
+/* ── Soft skills ── */
 .s-html  { background: rgba(228, 77,  38,  0.15); color: #e44d26; }
 .s-css   { background: rgba(38,  77,  228, 0.15); color: #5b9cf6; }
 .s-js    { background: rgba(247, 223, 30,  0.15); color: #f7df1e; }
@@ -975,25 +1036,79 @@ a { color: var(--primary); text-decoration: none; }
 .s-laravel { background: rgba(255, 45, 32, 0.15); color: #ff5c4d; }
 .s-vue   { background: rgba(66,  184, 131, 0.15); color: #42b883; }
 
-.skill-content { flex: 1; min-width: 0; }
-.skill-label { color: var(--light); font-weight: 600; font-size: 0.92rem; }
-.skill-pct   { color: var(--primary); font-weight: 700; font-size: 0.82rem; font-family: 'Montserrat', sans-serif; }
+/* Les deux colonnes (texte+soft skills / timeline) doivent se terminer au
+   même niveau : on les rend flex-column, et la carte soft skills s'étire
+   pour occuper l'espace restant, en répartissant ses lignes uniformément. */
+.skill-col-stretch { display: flex; flex-direction: column; }
 
-.skill-track {
-    height: 5px;
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 0;
+.soft-skills-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 85%;
+    max-width: 85%;
+    background: var(--dark-3);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 22px 20px;
 }
 
-.skill-fill {
-    height: 100%;
-    width: 0;
-    border-radius: 5px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-    transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+.soft-skills-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--light);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.soft-skills-card-title i {
+    color: var(--primary);
+    font-size: 1.05rem;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6));
+}
+
+.soft-skills-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.soft-skill-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--dark-2);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    padding: 10px 18px;
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.soft-skill-row:hover {
+    border-color: rgba(0, 212, 255, 0.4);
+    background: rgba(0, 212, 255, 0.05);
+    transform: translateX(4px);
+}
+
+.soft-skill-row-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.soft-skill-row span:last-child {
+    color: var(--light);
+    font-weight: 600;
+    font-size: 0.92rem;
 }
 
 /* ── Tab buttons ── */

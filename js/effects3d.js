@@ -358,6 +358,13 @@
         { opacity: 0 },
         { opacity: 1, duration: 0.8, scrollTrigger: st('.tech-marquee-section', 'top 90%') }
     );
+    gsap.fromTo('.tech-level-card',
+        { opacity: 0, y: 30 },
+        {
+            opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: 'power2.out',
+            scrollTrigger: st('.tech-levels-grid', 'top 85%')
+        }
+    );
 
 
     /* ── ABOUT ────────────────────────────────── */
@@ -393,23 +400,12 @@
     skillTl
         .from('#skill h1.display-5',   { opacity: 0, x: -50, duration: 0.8 })
         .from('#skill p',              { opacity: 0, y: 18,  duration: 0.6 }, '-=0.4')
-        .from('.skills-subtitle',      { opacity: 0, x: -25, duration: 0.6 }, '-=0.3')
-        .fromTo('.skill-card-new',
-            { opacity: 0, x: -45 },
-            { opacity: 1, x: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out' },
+        .from('.soft-skills-card-title', { opacity: 0, x: -25, duration: 0.6 }, '-=0.3')
+        .fromTo('.soft-skill-row',
+            { opacity: 0, x: -20 },
+            { opacity: 1, x: 0, duration: 0.45, stagger: 0.07, ease: 'power2.out' },
             '-=0.2'
         );
-
-    /* Animate skill bars quand visibles */
-    ScrollTrigger.create({
-        trigger: '.skills-grid',
-        start: 'top 80%',
-        onEnter: function () {
-            document.querySelectorAll('.skill-fill').forEach(function (fill) {
-                fill.style.width = (fill.getAttribute('aria-valuenow') || 0) + '%';
-            });
-        }
-    });
 
     gsap.from('.skill-tabs', {
         scrollTrigger: st('.skill-tabs', 'top 85%'),
