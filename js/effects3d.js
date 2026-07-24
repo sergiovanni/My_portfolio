@@ -305,6 +305,13 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
+    /* Les positions de déclenchement sont calculées dès l'exécution de ce script,
+       avant que toutes les images (notamment les grandes illustrations) aient fini
+       de charger et modifié la hauteur de la page. Sans ce recalcul, les triggers
+       situés après une image encore en cours de chargement restent décalés et ne
+       se déclenchent jamais (éléments bloqués à opacité 0). */
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+
     /* Config par défaut */
     gsap.defaults({ ease: 'power3.out' });
 
@@ -347,6 +354,10 @@
         scrollTrigger: st('#tech-orbit', 'top 78%'),
         opacity: 0, scale: 0.7, duration: 1, ease: 'back.out(1.4)'
     });
+    gsap.fromTo('.tech-marquee-section',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.8, scrollTrigger: st('.tech-marquee-section', 'top 90%') }
+    );
 
 
     /* ── ABOUT ────────────────────────────────── */
@@ -383,7 +394,11 @@
         .from('#skill h1.display-5',   { opacity: 0, x: -50, duration: 0.8 })
         .from('#skill p',              { opacity: 0, y: 18,  duration: 0.6 }, '-=0.4')
         .from('.skills-subtitle',      { opacity: 0, x: -25, duration: 0.6 }, '-=0.3')
-        .from('.skill-card-new',       { opacity: 0, x: -45, duration: 0.5, stagger: 0.1, ease: 'power2.out' }, '-=0.2');
+        .fromTo('.skill-card-new',
+            { opacity: 0, x: -45 },
+            { opacity: 1, x: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out' },
+            '-=0.2'
+        );
 
     /* Animate skill bars quand visibles */
     ScrollTrigger.create({
