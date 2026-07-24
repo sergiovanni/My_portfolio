@@ -29,12 +29,22 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css?v=25" rel="stylesheet">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Réseaux sociaux fixes (bas gauche, visibles sur toute la page) -->
+    <div class="fixed-social">
+        <a class="btn btn-square btn-primary" href="https://github.com/sergiovanni" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a class="btn btn-square btn-primary" href="https://www.linkedin.com/in/sergio-giovanni-hounsou-a72410268" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -123,11 +133,16 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home">
+    <div class="container-fluid my-6 mt-0" id="home">
+        <button type="button" id="themeToggle" class="theme-toggle-btn" aria-label="Basculer entre le mode sombre et le mode clair" title="Mode clair / sombre">
+            <i class="bi bi-sun-fill theme-icon theme-icon-sun"></i>
+            <i class="bi bi-moon-stars-fill theme-icon theme-icon-moon"></i>
+        </button>
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3" data-i18n="hero.im">I'm</h3>
+                    <span class="hero-badge" data-i18n="hero.badge">Disponible pour stage</span>
+                    <h3 class="text-primary mb-3" data-i18n="hero.im">Je suis</h3>
                     <h1 class="display-3 mb-3" data-i18n="hero.name">Sergio Giovanni HOUNSOU</h1>
                     <h2 class="typed-text-output d-inline"></h2>
                     <div class="typed-text d-none" data-i18n-typed="hero.typed">Développeur full-Stack</div>
@@ -138,13 +153,11 @@
                         </button>
                         <h5 class="ms-4 mb-0 d-none d-sm-block" data-i18n="hero.play">Play</h5>
                     </div>
-                    <div class="d-flex align-items-center mt-4 hero-social">
-                        <a class="btn btn-square btn-primary me-2" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-square btn-primary" href="https://www.linkedin.com/in/sergio-giovanni-hounsou-a72410268" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <img class="img-fluid" src="img/img_photo_prest.png" alt="">
+                    <div class="hero-img-wrapper">
+                        <img class="img-fluid" src="img/character-hero.png" alt="Sergio Giovanni HOUNSOU">
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,6 +185,53 @@
     <!-- Video Modal End -->
 
 
+    <!-- Tech Orbit Start -->
+    <div class="tech-orbit-section" id="tech-orbit">
+        <div class="container-fluid">
+            <div class="tech-orbit-row">
+                <div class="tech-orbit-character">
+                    <img src="img/character-desk.png" alt="Sergio au travail" class="img-fluid">
+                </div>
+                <div class="tech-orbit-content">
+                    <h4 class="tech-orbit-title" data-i18n="techorbit.title">Technologies que j'utilise</h4>
+                    <div class="orbit-wrapper">
+                        <div class="orbit-ellipse">
+                        <div class="orbit-ring">
+                            <div class="orbit-item" style="--angle: 0deg">
+                                <div class="orbit-icon s-html"><i class="fab fa-html5"></i></div>
+                            </div>
+                            <div class="orbit-item" style="--angle: 45deg">
+                                <div class="orbit-icon s-css"><i class="fab fa-css3-alt"></i></div>
+                            </div>
+                            <div class="orbit-item" style="--angle: 90deg">
+                                <div class="orbit-icon s-js"><i class="fab fa-js"></i></div>
+                            </div>
+                            <div class="orbit-item" style="--angle: 135deg">
+                                <div class="orbit-icon s-php"><i class="fab fa-php"></i></div>
+                            </div>
+                            <div class="orbit-item" style="--angle: 180deg">
+                                <div class="orbit-icon s-laravel"><i class="fab fa-laravel"></i></div>
+                            </div>
+                            <div class="orbit-item" style="--angle: 225deg">
+                                <div class="orbit-icon s-vue"><i class="fab fa-vuejs"></i></div>
+                            </div>
+                            <div class="orbit-item" style="--angle: 270deg">
+                                <div class="orbit-icon s-git"><i class="fab fa-git-alt"></i></div>
+                            </div>
+                            <div class="orbit-item" style="--angle: 315deg">
+                                <div class="orbit-icon s-bootstrap"><i class="fab fa-bootstrap"></i></div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="orbit-center"><i class="bi bi-code-square"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tech Orbit End -->
+
+
     <!-- About Start -->
     <div class="container-xxl py-6" id="about">
         <div class="container">
@@ -193,10 +253,14 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
+                            <div class="about-img-placeholder">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
                         </div>
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
+                            <div class="about-img-placeholder">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -220,127 +284,159 @@
     <div class="container-xxl py-6 pb-5" id="skill">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5" data-i18n="skills.title">Competences & Experience</h1>
-                    <p class="mb-4" data-i18n="skills.p1">Je maitrise les fondamentaux du front-end et du back-end, avec une attention a la qualite et aux bonnes pratiques.</p>
-                    <h3 class="mb-4" data-i18n="skills.subtitle">My Skills</h3>
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">HTML</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
+
+                <!-- ── Compétences ── -->
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-2" data-i18n="skills.title">Competences & Experience</h1>
+                    <p class="mb-5" data-i18n="skills.p1">Je maitrise les fondamentaux du front-end et du back-end, avec une attention a la qualite et aux bonnes pratiques.</p>
+                    <h4 class="skills-subtitle mb-4" data-i18n="skills.subtitle">My Skills</h4>
+                    <div class="skills-grid">
+
+                        <div class="skill-card-new">
+                            <div class="skill-icon-wrap s-html"><i class="fab fa-html5"></i></div>
+                            <div class="skill-content">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="skill-label">HTML5</span>
+                                    <span class="skill-pct">90%</span>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">CSS</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">JavaScript</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <div class="skill-track"><div class="skill-fill" aria-valuenow="90"></div></div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">PHP</h6>
-                                    <h6 class="font-weight-bold">80%</h6>
+
+                        <div class="skill-card-new">
+                            <div class="skill-icon-wrap s-css"><i class="fab fa-css3-alt"></i></div>
+                            <div class="skill-content">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="skill-label">CSS3</span>
+                                    <span class="skill-pct">85%</span>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Laravel</h6>
-                                    <h6 class="font-weight-bold">80%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Django / Vue.js</h6>
-                                    <h6 class="font-weight-bold">75%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <div class="skill-track"><div class="skill-fill" aria-valuenow="85"></div></div>
                             </div>
                         </div>
+
+                        <div class="skill-card-new">
+                            <div class="skill-icon-wrap s-js"><i class="fab fa-js"></i></div>
+                            <div class="skill-content">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="skill-label">JavaScript</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" aria-valuenow="85"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card-new">
+                            <div class="skill-icon-wrap s-php"><i class="fab fa-php"></i></div>
+                            <div class="skill-content">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="skill-label">PHP</span>
+                                    <span class="skill-pct">80%</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" aria-valuenow="80"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card-new">
+                            <div class="skill-icon-wrap s-laravel"><i class="fab fa-laravel"></i></div>
+                            <div class="skill-content">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="skill-label">Laravel</span>
+                                    <span class="skill-pct">80%</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" aria-valuenow="80"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card-new">
+                            <div class="skill-icon-wrap s-vue"><i class="fab fa-vuejs"></i></div>
+                            <div class="skill-content">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="skill-label">Django / Vue.js</span>
+                                    <span class="skill-pct">75%</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" aria-valuenow="75"></div></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1" data-i18n="skills.experience">Experience</button>
+
+                <!-- ── Expérience & Formation ── -->
+                <div class="col-lg-6">
+                    <ul class="skill-tabs nav mb-4">
+                        <li class="nav-item">
+                            <button class="nav-link skill-tab-btn active" data-bs-toggle="pill" data-bs-target="#tab-1" type="button">
+                                <i class="fas fa-briefcase me-2"></i><span data-i18n="skills.experience">Experience</span>
+                            </button>
                         </li>
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2" data-i18n="skills.education">Education</button>
+                        <li class="nav-item">
+                            <button class="nav-link skill-tab-btn" data-bs-toggle="pill" data-bs-target="#tab-2" type="button">
+                                <i class="fas fa-graduation-cap me-2"></i><span data-i18n="skills.education">Education</span>
+                            </button>
                         </li>
                     </ul>
+
                     <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="exp.khc.title">Stage Developpement Web</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1" data-i18n="exp.khc.date">2023 - 2024</p>
-                                    <h6 class="mb-0" data-i18n="exp.khc.company">Kapital Humain & Conseils, Cotonou</h6>
+                        <div id="tab-1" class="tab-pane fade show active p-0">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-date" data-i18n="exp.gfc.date">2025</span>
+                                        <h5 data-i18n="exp.gfc.title">Stage Professionnel - Developpement Web</h5>
+                                        <p class="timeline-company" data-i18n="exp.gfc.company">Global Freedom Corporation, Cotonou</p>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="exp.gfc.title">Stage Professionnel - Developpement Web</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1" data-i18n="exp.gfc.date">2025</p>
-                                    <h6 class="mb-0" data-i18n="exp.gfc.company">Global Freedom Corporation, Cotonou</h6>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-date" data-i18n="exp.khc.date">2023 - 2024</span>
+                                        <h5 data-i18n="exp.khc.title">Stage Developpement Web</h5>
+                                        <p class="timeline-company" data-i18n="exp.khc.company">Kapital Humain & Conseils, Cotonou</p>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="exp.egb.title">Stage - Initiation au Developpement Web</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1" data-i18n="exp.egb.date">2022</p>
-                                    <h6 class="mb-0" data-i18n="exp.egb.company">e-gbavou, Cotonou</h6>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-date" data-i18n="exp.egb.date">2022</span>
+                                        <h5 data-i18n="exp.egb.title">Stage - Initiation au Developpement Web</h5>
+                                        <p class="timeline-company" data-i18n="exp.egb.company">e-gbavou, Cotonou</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="edu.but.title">BUT 3 Informatique</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1" data-i18n="edu.but.date">2025</p>
-                                    <h6 class="mb-0" data-i18n="edu.but.school">UPPA/IUT Bayonne et Pays de l'Adour</h6>
+
+                        <div id="tab-2" class="tab-pane fade p-0">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-date" data-i18n="edu.but.date">2025</span>
+                                        <h5 data-i18n="edu.but.title">BUT 3 Informatique</h5>
+                                        <p class="timeline-company" data-i18n="edu.but.school">UPPA/IUT Bayonne et Pays de l'Adour</p>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="edu.licence.title">Licence Informatique</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1" data-i18n="edu.licence.date">2024</p>
-                                    <h6 class="mb-0" data-i18n="edu.licence.school">ENEAM - Cotonou, Benin</h6>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-date" data-i18n="edu.licence.date">2024</span>
+                                        <h5 data-i18n="edu.licence.title">Licence Informatique</h5>
+                                        <p class="timeline-company" data-i18n="edu.licence.school">ENEAM - Cotonou, Benin</p>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 data-i18n="edu.bac.title">Baccalaureat Scientifique D</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1" data-i18n="edu.bac.date">2020</p>
-                                    <h6 class="mb-0" data-i18n="edu.bac.school">College Catholique St Michel, Cotonou</h6>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-date" data-i18n="edu.bac.date">2020</span>
+                                        <h5 data-i18n="edu.bac.title">Baccalaureat Scientifique D</h5>
+                                        <p class="timeline-company" data-i18n="edu.bac.school">College Catholique St Michel, Cotonou</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -358,54 +454,58 @@
                     <a class="btn btn-primary py-3 px-5" href="#contact" data-i18n="service.cta">Disponible</a>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
+            <div class="service-carousel">
+                <div class="service-carousel-track">
+                    <div class="service-carousel-item">
+                        <div class="service-item">
+                            <div class="bg-icon mb-3">
+                                <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                            </div>
                             <h4 class="mb-3" data-i18n="service.webapp">Applications web</h4>
                             <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
                             <span data-i18n="service.p1">Developpement d'applications web modernes, from scratch ou en reprise, avec une architecture claire.</span>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code-branch fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
+                    <div class="service-carousel-item">
+                        <div class="service-item">
+                            <div class="bg-icon mb-3">
+                                <i class="fa fa-code-branch fa-2x text-dark"></i>
+                            </div>
                             <h4 class="mb-3" data-i18n="service.front">Integration front-end</h4>
                             <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
                             <span data-i18n="service.p2">Interfaces responsives, accessibles et animees avec HTML, CSS, JavaScript et Bootstrap.</span>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
+                    <div class="service-carousel-item">
+                        <div class="service-item">
+                            <div class="bg-icon mb-3">
+                                <i class="fa fa-code fa-2x text-dark"></i>
+                            </div>
                             <h4 class="mb-3" data-i18n="service.backend">Back-end & bases de donnees</h4>
                             <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
                             <span data-i18n="service.p3">APIs, logique metier, modelisation UML et gestion de donnees avec MySQL.</span>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
+                    <div class="service-carousel-item">
+                        <div class="service-item">
+                            <div class="bg-icon mb-3">
+                                <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                            </div>
                             <h4 class="mb-3" data-i18n="service.uiux">UI/UX & maquettes</h4>
                             <h6 class="mb-3" data-i18n-html="service.note">Disponible pour stage ou alternance</h6>
                             <span data-i18n="service.p4">Conception de maquettes claires et parcours utilisateurs efficaces.</span>
                         </div>
                     </div>
+                </div>
+
+                <button type="button" class="service-carousel-nav prev" aria-label="Precedent"><i class="bi bi-chevron-left"></i></button>
+                <button type="button" class="service-carousel-nav next" aria-label="Suivant"><i class="bi bi-chevron-right"></i></button>
+
+                <div class="service-carousel-dots">
+                    <button type="button" class="service-carousel-dot active" data-index="0" aria-label="Service 1"></button>
+                    <button type="button" class="service-carousel-dot" data-index="1" aria-label="Service 2"></button>
+                    <button type="button" class="service-carousel-dot" data-index="2" aria-label="Service 3"></button>
+                    <button type="button" class="service-carousel-dot" data-index="3" aria-label="Service 4"></button>
                 </div>
             </div>
         </div>
@@ -696,6 +796,18 @@
     <!-- Contact End -->
 
 
+    <!-- Character Reveal Start -->
+    <div class="character-section" id="character-reveal">
+        <div class="container">
+            <div class="character-placeholder">
+                <i class="bi bi-laptop"></i>
+                <span data-i18n="character.comingSoon">Illustration à venir</span>
+            </div>
+        </div>
+    </div>
+    <!-- Character Reveal End -->
+
+
     <!-- Map Start -->
     <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container-xxl pt-5 px-0">
@@ -740,7 +852,15 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=3"></script>
+
+    <!-- 3D Effects Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/effects3d.js?v=14"></script>
 </body>
 
 </html>
