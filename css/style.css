@@ -634,6 +634,7 @@ a { color: var(--primary); text-decoration: none; }
     align-items: center;
     flex: 0 0 40%;
     max-width: 40%;
+    margin-left: 4rem;
     text-align: center;
 }
 
@@ -651,7 +652,7 @@ a { color: var(--primary); text-decoration: none; }
 .tech-orbit-character img {
     position: relative;
     z-index: 1;
-    max-height: 480px;
+    max-height: 400px;
     width: auto;
     max-width: 100%;
     filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.45));
