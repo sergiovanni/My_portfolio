@@ -14,8 +14,9 @@
     --glow-strong: 0 0 40px rgba(0, 212, 255, 0.55);
 }
 
-/* ─── Light theme — même palette primaire/secondaire/accent, surfaces inversées ─── */
+/* ─── Light theme — surfaces inversées, primary recalé pour la lisibilité ─── */
 :root[data-theme="light"] {
+    --primary: #0090c9;
     --dark: #eef1f6;
     --dark-2: #e5e9f0;
     --dark-3: #dbe1e9;
@@ -23,6 +24,8 @@
     --muted: #5b6572;
     --glass: rgba(15, 23, 42, 0.045);
     --glass-border: rgba(0, 150, 200, 0.25);
+    --glow: 0 0 20px rgba(0, 144, 201, 0.3);
+    --glow-strong: 0 0 40px rgba(0, 144, 201, 0.5);
 }
 
 * { box-sizing: border-box; }
