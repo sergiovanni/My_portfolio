@@ -433,14 +433,20 @@
         scrollTrigger: st('#project', 'top 82%'),
         opacity: 0, y: 30, duration: 0.8
     });
-    gsap.from('#portfolio-flters li', {
-        scrollTrigger: st('#portfolio-flters', 'top 85%'),
-        opacity: 0, y: -20, duration: 0.5, stagger: 0.1, ease: 'back.out(2)'
-    });
-    gsap.from('.portfolio-item', {
-        scrollTrigger: st('.portfolio-container', 'top 82%'),
-        opacity: 0, y: 55, scale: 0.9, duration: 0.65, stagger: 0.1, ease: 'back.out(1.2)'
-    });
+    gsap.fromTo('#portfolio-flters li',
+        { opacity: 0, y: -20 },
+        {
+            opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'back.out(2)',
+            scrollTrigger: st('#portfolio-flters', 'top 85%')
+        }
+    );
+    gsap.fromTo('.portfolio-item',
+        { opacity: 0, y: 55, scale: 0.9 },
+        {
+            opacity: 1, y: 0, scale: 1, duration: 0.65, stagger: 0.1, ease: 'back.out(1.2)',
+            scrollTrigger: st('.portfolio-container', 'top 82%')
+        }
+    );
 
 
     /* ── TEAM / CENTRES D'INTÉRÊT ─────────────── */
@@ -448,10 +454,19 @@
         scrollTrigger: st('#team', 'top 82%'),
         opacity: 0, y: 30, duration: 0.8
     });
-    gsap.from('.team-item', {
-        scrollTrigger: st('#team .row.g-4', 'top 82%'),
-        opacity: 0, y: 60, scale: 0.88, duration: 0.7, stagger: 0.2, ease: 'back.out(1.4)'
-    });
+    gsap.fromTo('.team-item',
+        { opacity: 0, y: 60, scale: 0.88 },
+        {
+            opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.2, ease: 'back.out(1.4)',
+            scrollTrigger: st('#team .row.g-4', 'top 82%')
+        }
+    );
+
+    /* ── CTA BANNER ────────────────────────────── */
+    gsap.fromTo('.cta-banner-section',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', scrollTrigger: st('.cta-banner-section', 'top 85%') }
+    );
 
 
     /* ── TESTIMONIALS ─────────────────────────── */

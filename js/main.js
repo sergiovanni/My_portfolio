@@ -1,9 +1,9 @@
-(function ($) {
+(function($) {
     "use strict";
 
     // Spinner
-    var spinner = function () {
-        setTimeout(function () {
+    var spinner = function() {
+        setTimeout(function() {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
@@ -17,7 +17,7 @@
 
 
     // Navbar on scrolling
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         if ($(this).scrollTop() > 300) {
             $('.navbar').fadeIn('slow').css('display', 'flex');
         } else {
@@ -27,7 +27,7 @@
 
 
     // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
+    $(".navbar-nav a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
 
@@ -44,15 +44,15 @@
 
 
     // Back to top button
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         if ($(this).scrollTop() > 300) {
             $('.back-to-top').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
         }
     });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+    $('.back-to-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -117,7 +117,7 @@
             "exp.khc.company": "Kapital Humain & Conseils, Cotonou",
             "exp.conciergerie.title": "Full-Stack Developer (Internship)",
             "exp.conciergerie.date": "2026",
-            "exp.conciergerie.company": "La Cle Du Confort (Conciergerie Lara), France",
+            "exp.conciergerie.company": "La Clé Du Confort (Conciergerie Lara), France",
             "exp.gfc.title": "Professional Internship - Web Development",
             "exp.gfc.date": "2025",
             "exp.gfc.company": "Global Freedom Corporation, Cotonou",
@@ -161,13 +161,15 @@
             "projects.portfolio": "Personal portfolio",
             "projects.portfolio.stack": "HTML, CSS, JavaScript",
             "team.title": "Interests",
-            "team.cta": "Get in touch",
             "team.interest1": "Video games",
             "team.interest1.desc": "Strategy and analytical thinking",
             "team.interest2": "Sports",
             "team.interest2.desc": "Discipline and perseverance",
             "team.interest3": "Reading",
             "team.interest3.desc": "Curiosity and continuous learning",
+            "cta.title": "Let's collaborate",
+            "cta.subtitle": "Got a project in mind? Let's talk about it!",
+            "cta.button": "Contact",
             "testimonial.title": "What I Bring",
             "testimonial.p1": "Rigor, attention to detail and respect for deadlines to deliver clean, maintainable work.",
             "testimonial.name1": "Quality",
@@ -210,16 +212,16 @@
             "nav.language": "FR / EN",
             "nav.english": "Anglais",
             "nav.french": "Francais",
-            "hero.badge": "Disponible pour stage",
+            "hero.badge": "Disponible pour une alternance",
             "hero.im": "Je suis",
             "hero.name": "Sergio Giovanni HOUNSOU",
-            "hero.typed": "Developpeur Web Full-stack, Passionne UI/UX",
-            "hero.download": "Telecharger le CV",
+            "hero.typed": "Développeur Web Full-stack, Data Analyst Junior, Passionné UI/UX",
+            "hero.download": "Télecharger le CV",
             "hero.play": "Lire",
             "hero.videoTitle": "Video YouTube",
-            "techorbit.title": "Technologies que j'utilise",
+            "techorbit.title": "Mes Compétences techniques",
             "character.comingSoon": "Illustration a venir",
-            "about.years": "Annees",
+            "about.years": "Années",
             "about.experience": "d'experience en developpement web",
             "about.p1": "Je suis developpeur web en formation a l'IUT d'Anglet, en France. Curieux, rigoureux et passionne, je conçois des sites modernes et performants adaptes aux besoins des utilisateurs.",
             "about.teamwork": "Travail d'equipe",
@@ -235,8 +237,8 @@
             "skills.subtitle": "Soft Skills",
             "techlevels.languages": "Langages",
             "techlevels.frameworks": "Frameworks",
-            "techlevels.databases": "Bases de donnees",
-            "techlevels.tools": "Outils & Methodes",
+            "techlevels.databases": "Bases de données",
+            "techlevels.tools": "Outils & Méthodes",
             "softskills.team": "Esprit d'equipe",
             "softskills.team.desc": "Collaborer, ecouter, avancer ensemble",
             "softskills.rigor": "Rigueur",
@@ -252,9 +254,9 @@
             "exp.khc.title": "Stage Developpement Web",
             "exp.khc.date": "2023 - 2024",
             "exp.khc.company": "Kapital Humain & Conseils, Cotonou",
-            "exp.conciergerie.title": "Developpeur Full-Stack (Stage)",
+            "exp.conciergerie.title": "Développeur Full-Stack (Stage)",
             "exp.conciergerie.date": "2026",
-            "exp.conciergerie.company": "La Cle Du Confort (Conciergerie Lara), France",
+            "exp.conciergerie.company": "La Clé Du Confort (Conciergerie Lara), France",
             "exp.gfc.title": "Stage Professionnel - Developpement Web",
             "exp.gfc.date": "2025",
             "exp.gfc.company": "Global Freedom Corporation, Cotonou",
@@ -276,7 +278,7 @@
             "service.front": "Integration front-end",
             "service.backend": "Back-end & bases de donnees",
             "service.uiux": "UI/UX & maquettes",
-            "service.note": "Disponible pour stage ou alternance",
+            "service.note": "Disponible pour une alternance",
             "service.p1": "Developpement d'applications web modernes, from scratch ou en reprise, avec une architecture claire.",
             "service.p2": "Interfaces responsives, accessibles et animees avec HTML, CSS, JavaScript et Bootstrap.",
             "service.p3": "APIs, logique metier, modelisation UML et gestion de donnees avec MySQL.",
@@ -298,13 +300,15 @@
             "projects.portfolio": "Portfolio personnel",
             "projects.portfolio.stack": "HTML, CSS, JavaScript",
             "team.title": "Centres d'interet",
-            "team.cta": "Me contacter",
             "team.interest1": "Jeux video",
             "team.interest1.desc": "Esprit d'analyse et strategie",
             "team.interest2": "Sports",
             "team.interest2.desc": "Energie, discipline et perseverance",
             "team.interest3": "Lecture",
             "team.interest3.desc": "Curiosite et apprentissage continu",
+            "cta.title": "Collaborons ensemble",
+            "cta.subtitle": "Un projet en tête ? Discutons-en !",
+            "cta.button": "Contact",
             "testimonial.title": "Ce que j'apporte",
             "testimonial.p1": "Rigueur, sens du detail et respect des delais pour des livrables propres et maintenables.",
             "testimonial.name1": "Qualite",
@@ -361,21 +365,21 @@
         document.documentElement.setAttribute('lang', lang);
         document.title = translations[lang]["meta.title"] || document.title;
 
-        $('[data-i18n]').each(function () {
+        $('[data-i18n]').each(function() {
             var key = $(this).data('i18n');
             if (translations[lang][key]) {
                 $(this).text(translations[lang][key]);
             }
         });
 
-        $('[data-i18n-html]').each(function () {
+        $('[data-i18n-html]').each(function() {
             var key = $(this).data('i18n-html');
             if (translations[lang][key]) {
                 $(this).html(translations[lang][key]);
             }
         });
 
-        $('[data-i18n-placeholder]').each(function () {
+        $('[data-i18n-placeholder]').each(function() {
             var key = $(this).data('i18n-placeholder');
             if (translations[lang][key]) {
                 $(this).attr('placeholder', translations[lang][key]);
@@ -402,13 +406,13 @@
 
     // Modal Video
     var $videoSrc;
-    $('.btn-play').click(function () {
+    $('.btn-play').click(function() {
         $videoSrc = $(this).data("src");
     });
-    $('#videoModal').on('shown.bs.modal', function (e) {
+    $('#videoModal').on('shown.bs.modal', function(e) {
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
     });
-    $('#videoModal').on('hide.bs.modal', function (e) {
+    $('#videoModal').on('hide.bs.modal', function(e) {
         $("#video").attr('src', $videoSrc);
     });
 
@@ -421,11 +425,11 @@
 
 
     // Skills
-    $('.skill').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
+    $('.skill').waypoint(function() {
+        $('.progress .progress-bar').each(function() {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
-    }, {offset: '80%'});
+    }, { offset: '80%' });
 
 
     // Portfolio isotope and filter
@@ -433,11 +437,11 @@
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
     });
-    $('#portfolio-flters li').on('click', function () {
+    $('#portfolio-flters li').on('click', function() {
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
 
 
@@ -453,11 +457,10 @@
 
     // Language switcher init
     applyTranslations(detectLanguage());
-    $(document).on('click', '.lang-option', function () {
+    $(document).on('click', '.lang-option', function() {
         var lang = $(this).data('lang');
         applyTranslations(lang);
     });
 
 
 })(jQuery);
-
