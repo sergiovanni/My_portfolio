@@ -507,13 +507,6 @@
     });
 
 
-    /* ── CHARACTER REVEAL ─────────────────────── */
-    gsap.from('#character-reveal .character-placeholder', {
-        scrollTrigger: st('#character-reveal', 'top 85%'),
-        opacity: 0, y: 60, duration: 1, ease: 'power3.out'
-    });
-
-
     /* ── FOOTER ───────────────────────────────── */
     gsap.from('.container-fluid.bg-dark .container', {
         scrollTrigger: st('.container-fluid.bg-dark', 'top 95%'),
