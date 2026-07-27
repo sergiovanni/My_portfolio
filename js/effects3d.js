@@ -508,8 +508,8 @@
 
 
     /* ── FOOTER ───────────────────────────────── */
-    gsap.from('.container-fluid.bg-dark .container', {
-        scrollTrigger: st('.container-fluid.bg-dark', 'top 95%'),
+    gsap.from('.footer-section .footer-top', {
+        scrollTrigger: st('.footer-section', 'top 95%'),
         opacity: 0, y: 20, duration: 0.6
     });
 

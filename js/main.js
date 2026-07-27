@@ -195,8 +195,9 @@
             "form.messagePlaceholder": "Leave a message here",
             "form.send": "Send Message",
             "footer.rights": "&copy; <a class=\"border-bottom text-secondary\" href=\"#\">Sergio Giovanni HOUNSOU</a>, All rights reserved.",
-            "footer.designed": "Designed By",
-            "footer.distributed": "Distributed By:"
+            "footer.tagline": "Full-stack developer, currently looking for a work-study program.",
+            "footer.quicklinks": "Quick Links",
+            "footer.getintouch": "Get In Touch"
         },
         fr: {
             "meta.title": "Sergio Giovanni HOUNSOU - Portfolio",
@@ -334,8 +335,9 @@
             "form.messagePlaceholder": "Laissez un message ici",
             "form.send": "Envoyer le message",
             "footer.rights": "&copy; <a class=\"border-bottom text-secondary\" href=\"#\">Sergio Giovanni HOUNSOU</a>, Tous droits reserves.",
-            "footer.designed": "Concu par",
-            "footer.distributed": "Distribue par :"
+            "footer.tagline": "Developpeur full-stack, actuellement a la recherche d'une alternance.",
+            "footer.quicklinks": "Liens rapides",
+            "footer.getintouch": "Me contacter"
         }
     };
 
