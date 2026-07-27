@@ -92,7 +92,7 @@
 
     <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <img src="img/Logo.png" alt="Sergio Hounson" style="height: 40px; width: auto;">
+            <img src="img/logo.jpg" alt="Sergio Hounson" style="height: 40px; width: auto;">
         </a>
 
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -1029,35 +1029,35 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form id="contactForm">
+                    <p class="mb-4" data-i18n-html="contact.formNote">Le formulaire est en cours d'activation. Vous pouvez deja me contacter par email ou via LinkedIn.</p>
+                    <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" data-i18n-placeholder="form.name" required>
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" data-i18n-placeholder="form.name">
                                     <label for="name" data-i18n="form.name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" data-i18n-placeholder="form.email" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" data-i18n-placeholder="form.email">
                                     <label for="email" data-i18n="form.email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" data-i18n-placeholder="form.subject">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" data-i18n-placeholder="form.subject">
                                     <label for="subject" data-i18n="form.subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" data-i18n-placeholder="form.messagePlaceholder" required></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px" data-i18n-placeholder="form.messagePlaceholder"></textarea>
                                     <label for="message" data-i18n="form.message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit" id="contactSubmit" data-i18n="form.send">Send Message</button>
-                                <div id="contactFormStatus" class="mt-3" role="status" aria-live="polite"></div>
+                                <button class="btn btn-primary py-3 px-5" type="submit" data-i18n="form.send">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -1068,43 +1068,19 @@
     <!-- Contact End -->
 
 
-    <!-- Footer Start -->
-    <footer class="footer-section">
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
         <div class="container">
-            <div class="row g-4 footer-top">
-                <div class="col-lg-4 col-md-6">
-                    <a href="index.html" class="footer-brand">Sergio<span>.</span></a>
-                    <p class="footer-tagline" data-i18n="footer.tagline">Developpeur full-stack, a la recherche d'une alternance.</p>
-                    <div class="d-flex gap-2 mt-3">
-                        <a class="btn btn-square btn-primary" href="https://github.com/sergiovanni" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-square btn-primary" href="https://www.linkedin.com/in/sergio-giovanni-hounsou-a72410268" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span data-i18n-html="footer.rights">&copy; <a class="border-bottom text-secondary" href="#">Sergio Giovanni HOUNSOU</a>, Tous droits réservés.</span>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h6 class="footer-heading" data-i18n="footer.quicklinks">Liens rapides</h6>
-                    <ul class="footer-links">
-                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
-                        <li><a href="#about" data-i18n="nav.about">About</a></li>
-                        <li><a href="#project" data-i18n="nav.projects">Projects</a></li>
-                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h6 class="footer-heading" data-i18n="footer.getintouch">Me contacter</h6>
-                    <ul class="footer-links">
-                        <li><i class="bi bi-envelope-fill me-2"></i><a href="mailto:sergiovanni100@gmail.com">sergiovanni100@gmail.com</a></li>
-                        <li><i class="bi bi-telephone-fill me-2"></i><a href="tel:+33746295085">+33 7 46 29 50 85</a></li>
-                    </ul>
-                </div>
+                <div class="col-md-6 text-center text-md-end"></div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <span data-i18n-html="footer.rights">&copy; <a href="#">Sergio Giovanni HOUNSOU</a>, Tous droits réservés.</span>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer End -->
+    </div>
+    </div>
+    <!-- Copyright End -->
 
 
     <!-- Back to Top -->
@@ -1125,9 +1101,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js?v=10"></script>
-
-    <!-- Early UI (curseur, theme, carousel) — reste cliquable sans attendre les libs 3D -->
-    <script src="js/ui-early.js?v=1"></script>
 
     <!-- 3D Effects Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
