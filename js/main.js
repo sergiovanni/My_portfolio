@@ -456,7 +456,15 @@
     });
 
 
-    // Contact form submission
+    // Contact form submission — EmailJS (100% cote navigateur, aucun backend requis)
+    var EMAILJS_PUBLIC_KEY = 'LDUD3_CflnrHktbeV';
+    var EMAILJS_SERVICE_ID = 'service_kadk3b7';
+    var EMAILJS_TEMPLATE_ID = 'template_ll4gzup';
+
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
     $('#contactForm').on('submit', function(event) {
         event.preventDefault();
 
@@ -476,25 +484,13 @@
         $submit.prop('disabled', true).text(t['form.sending']);
         $status.removeClass('text-success text-danger').text('');
 
-        fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        })
-            .then(function(response) {
-                return response.json().then(function(data) {
-                    return { ok: response.ok, data: data };
-                });
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, payload)
+            .then(function() {
+                $status.addClass('text-success').text(t['form.success']);
+                $form[0].reset();
             })
-            .then(function(result) {
-                if (result.ok && result.data.ok) {
-                    $status.addClass('text-success').text(t['form.success']);
-                    $form[0].reset();
-                } else {
-                    $status.addClass('text-danger').text((result.data && result.data.error) || t['form.error']);
-                }
-            })
-            .catch(function() {
+            .catch(function(err) {
+                console.error('EmailJS error:', err);
                 $status.addClass('text-danger').text(t['form.error']);
             })
             .finally(function() {
