@@ -198,7 +198,7 @@
             "form.success": "Thanks! Your message has been sent, I'll reply soon.",
             "form.error": "Something went wrong. Please try again or email me directly.",
             "footer.rights": "&copy; <a class=\"border-bottom text-secondary\" href=\"#\">Sergio Giovanni HOUNSOU</a>, All rights reserved.",
-            "footer.tagline": "Full-stack developer, currently looking for a work-study program.",
+            "footer.tagline": "Junior Data Analyst - Full-Stack Developer<br>Currently looking for a work-study program.",
             "footer.quicklinks": "Quick Links",
             "footer.getintouch": "Get In Touch"
         },
@@ -340,7 +340,7 @@
             "form.success": "Merci ! Votre message a bien ete envoye, je vous repondrai rapidement.",
             "form.error": "Une erreur est survenue. Reessayez ou ecrivez-moi directement par email.",
             "footer.rights": "&copy; <a class=\"border-bottom text-secondary\" href=\"#\">Sergio Giovanni HOUNSOU</a>, Tous droits reserves.",
-            "footer.tagline": "Developpeur full-stack, actuellement a la recherche d'une alternance.",
+            "footer.tagline": "Data analyst Junior - Developpeur Full-Stack<br>Actuellement a la recherche d'une alternance.",
             "footer.quicklinks": "Liens rapides",
             "footer.getintouch": "Me contacter"
         }
