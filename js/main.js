@@ -1,15 +1,16 @@
 (function($) {
     "use strict";
 
-    // Spinner
-    var spinner = function() {
+    // Loader — reste visible jusqu'au chargement reel de la page (images incluses),
+    // avec une duree minimum pour eviter un flash trop rapide sur les chargements en cache.
+    var loaderShownAt = Date.now();
+    var MIN_LOADER_MS = 500;
+    $(window).on('load', function() {
+        var remaining = Math.max(0, MIN_LOADER_MS - (Date.now() - loaderShownAt));
         setTimeout(function() {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
+            $('#spinner').removeClass('show');
+        }, remaining);
+    });
 
 
     // Initiate the wowjs
@@ -187,13 +188,15 @@
             "contact.call": "Call me:",
             "contact.mail": "Email me:",
             "contact.follow": "Follow me:",
-            "contact.formNote": "The contact form is being set up. You can already reach me by email or on LinkedIn.",
             "form.name": "Your Name",
             "form.email": "Your Email",
             "form.subject": "Subject",
             "form.message": "Message",
             "form.messagePlaceholder": "Leave a message here",
             "form.send": "Send Message",
+            "form.sending": "Sending...",
+            "form.success": "Thanks! Your message has been sent, I'll reply soon.",
+            "form.error": "Something went wrong. Please try again or email me directly.",
             "footer.rights": "&copy; <a class=\"border-bottom text-secondary\" href=\"#\">Sergio Giovanni HOUNSOU</a>, All rights reserved.",
             "footer.tagline": "Full-stack developer, currently looking for a work-study program.",
             "footer.quicklinks": "Quick Links",
@@ -327,13 +330,15 @@
             "contact.call": "Appelez-moi :",
             "contact.mail": "Ecrivez-moi :",
             "contact.follow": "Suivez-moi :",
-            "contact.formNote": "Le formulaire est en cours d'activation. Vous pouvez deja me contacter par email ou via LinkedIn.",
             "form.name": "Votre nom",
             "form.email": "Votre email",
             "form.subject": "Sujet",
             "form.message": "Message",
             "form.messagePlaceholder": "Laissez un message ici",
             "form.send": "Envoyer le message",
+            "form.sending": "Envoi en cours...",
+            "form.success": "Merci ! Votre message a bien ete envoye, je vous repondrai rapidement.",
+            "form.error": "Une erreur est survenue. Reessayez ou ecrivez-moi directement par email.",
             "footer.rights": "&copy; <a class=\"border-bottom text-secondary\" href=\"#\">Sergio Giovanni HOUNSOU</a>, Tous droits reserves.",
             "footer.tagline": "Developpeur full-stack, actuellement a la recherche d'une alternance.",
             "footer.quicklinks": "Liens rapides",
@@ -462,6 +467,53 @@
     $(document).on('click', '.lang-option', function() {
         var lang = $(this).data('lang');
         applyTranslations(lang);
+    });
+
+
+    // Contact form submission
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault();
+
+        var $form = $(this);
+        var $submit = $('#contactSubmit');
+        var $status = $('#contactFormStatus');
+        var lang = detectLanguage();
+        var t = translations[lang];
+
+        var payload = {
+            name: $('#name').val().trim(),
+            email: $('#email').val().trim(),
+            subject: $('#subject').val().trim(),
+            message: $('#message').val().trim()
+        };
+
+        $submit.prop('disabled', true).text(t['form.sending']);
+        $status.removeClass('text-success text-danger').text('');
+
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+            .then(function(response) {
+                return response.json().then(function(data) {
+                    return { ok: response.ok, data: data };
+                });
+            })
+            .then(function(result) {
+                if (result.ok && result.data.ok) {
+                    $status.addClass('text-success').text(t['form.success']);
+                    $form[0].reset();
+                } else {
+                    $status.addClass('text-danger').text((result.data && result.data.error) || t['form.error']);
+                }
+            })
+            .catch(function() {
+                $status.addClass('text-danger').text(t['form.error']);
+            })
+            .finally(function() {
+                $submit.prop('disabled', false).text(t['form.send']);
+            });
     });
 
 
