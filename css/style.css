@@ -1034,6 +1034,11 @@ a { color: var(--primary); text-decoration: none; }
 #about h3.lh-base { color: var(--light); font-size: 1.6rem; }
 #about > .container p, #about p.mb-4, #about p.mb-0 { color: var(--muted); line-height: 1.85; }
 
+@media (max-width: 767.98px) {
+    #about .years .display-1 { font-size: 5rem; line-height: 4.5rem; }
+    #about .d-flex.align-items-center.mb-5 { flex-wrap: wrap; row-gap: 0.75rem; }
+}
+
 #about .far.fa-check-circle {
     color: var(--primary);
     text-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
@@ -1375,6 +1380,7 @@ a { color: var(--primary); text-decoration: none; }
 .service-carousel {
     position: relative;
     padding: 1rem 70px 0;
+    overflow-x: hidden;
 }
 
 .service-carousel-track {
