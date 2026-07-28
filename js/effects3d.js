@@ -17,39 +17,45 @@
 
     /* ══════════════════════════════════════════
        CUSTOM CURSOR
+       (desactive sur petit ecran / tactile : pas de souris, donc pas
+       de curseur a suivre — voir la media query correspondante en CSS.)
     ══════════════════════════════════════════ */
-    var cursor = document.querySelector('.cursor');
-    var follower = document.querySelector('.cursor-follower');
-    var mouseX = window.innerWidth / 2;
-    var mouseY = window.innerHeight / 2;
-    var followerX = mouseX;
-    var followerY = mouseY;
+    var isTouchOrSmallScreen = window.matchMedia('(max-width: 991.98px), (hover: none) and (pointer: coarse)').matches;
 
-    document.addEventListener('mousemove', function (e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.left = mouseX + 'px';
-        cursor.style.top = mouseY + 'px';
-    }, { passive: true });
+    if (!isTouchOrSmallScreen) {
+        var cursor = document.querySelector('.cursor');
+        var follower = document.querySelector('.cursor-follower');
+        var mouseX = window.innerWidth / 2;
+        var mouseY = window.innerHeight / 2;
+        var followerX = mouseX;
+        var followerY = mouseY;
 
-    (function tickFollower() {
-        followerX += (mouseX - followerX) * 0.13;
-        followerY += (mouseY - followerY) * 0.13;
-        follower.style.left = followerX + 'px';
-        follower.style.top = followerY + 'px';
-        requestAnimationFrame(tickFollower);
-    })();
+        document.addEventListener('mousemove', function (e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        }, { passive: true });
 
-    document.querySelectorAll('a, button, [data-tilt], #portfolio-flters li, .portfolio-item, .service-item').forEach(function (el) {
-        el.addEventListener('mouseenter', function () {
-            cursor.classList.add('hover');
-            follower.classList.add('hover');
+        (function tickFollower() {
+            followerX += (mouseX - followerX) * 0.13;
+            followerY += (mouseY - followerY) * 0.13;
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+            requestAnimationFrame(tickFollower);
+        })();
+
+        document.querySelectorAll('a, button, [data-tilt], #portfolio-flters li, .portfolio-item, .service-item').forEach(function (el) {
+            el.addEventListener('mouseenter', function () {
+                cursor.classList.add('hover');
+                follower.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', function () {
+                cursor.classList.remove('hover');
+                follower.classList.remove('hover');
+            });
         });
-        el.addEventListener('mouseleave', function () {
-            cursor.classList.remove('hover');
-            follower.classList.remove('hover');
-        });
-    });
+    }
 
 
     /* ══════════════════════════════════════════

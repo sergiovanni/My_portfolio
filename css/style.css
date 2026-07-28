@@ -113,6 +113,13 @@ a { color: var(--primary); text-decoration: none; }
     transform: translate(-50%, -50%) scale(1.5);
 }
 
+/* Sur petit ecran / tactile, pas de souris : on desactive l'effet et on
+   restaure le curseur natif (utile aussi pour les appareils hybrides). */
+@media (max-width: 991.98px), (hover: none) and (pointer: coarse) {
+    body { cursor: auto; }
+    .cursor, .cursor-follower { display: none !important; }
+}
+
 /* ─── Utilities ─── */
 .my-6 { margin-top: 6rem; margin-bottom: 6rem; }
 .py-6 { padding-top: 6rem; padding-bottom: 6rem; }
