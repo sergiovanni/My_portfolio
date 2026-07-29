@@ -215,7 +215,7 @@
             "hero.typed": "Développeur Fulll-Stack",
             "hero.download": "Télécharger le CV",
             "hero.play": "Lire",
-            "hero.videoTitle": "Vidéo YouTube",
+            "hero.videoTitle": "Présentation vidéo",
             "techorbit.title": "Mes Compétences techniques",
             "about.years": "Années",
             "about.experience": "d'expérience en développement full-stack",
