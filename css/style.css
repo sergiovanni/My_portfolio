@@ -1886,3 +1886,16 @@ textarea.form-control { resize: none; }
 section, .container-fluid, .container-xxl {
     position: relative;
 }
+
+
+/* ─── Missions (timeline) & carte IA ─── */
+.timeline-missions {
+    margin: 8px 0 0;
+    padding-left: 16px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+.timeline-missions li { margin-bottom: 3px; }
+.timeline-missions li::marker { color: var(--primary); }
+.ai-skills-card { margin-top: 1.5rem; }
