@@ -358,6 +358,15 @@ a { color: var(--primary); text-decoration: none; }
 .navbar-toggler { border-color: var(--glass-border); }
 .navbar-toggler-icon { filter: invert(1); }
 
+/* Petits écrans larges (992–1199px) : on resserre la navbar pour que
+   le sélecteur FR / EN reste visible. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar.fixed-top { padding-left: 1rem !important; padding-right: 1rem !important; }
+    .navbar .navbar-nav .nav-link { padding: 20px 8px; font-size: 14px; }
+    .navbar .navbar-brand img { height: 60px !important; }
+    .navbar .navbar-nav.ms-3 { margin-left: 0.25rem !important; }
+}
+
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link { padding: 10px 0; }
     .navbar .navbar-collapse {
@@ -1128,6 +1137,10 @@ a { color: var(--primary); text-decoration: none; }
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 22px 20px;
+}
+
+@media (max-width: 991.98px) {
+    .soft-skills-card { width: 100%; max-width: 100%; }
 }
 
 .soft-skills-card-title {
