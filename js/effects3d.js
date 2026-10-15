@@ -62,8 +62,9 @@
        VANTA.JS NET — Fond 3D hero
     ══════════════════════════════════════════ */
     var vantaNetEffect = null;
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     try {
-        if (typeof VANTA !== 'undefined' && VANTA.NET) {
+        if (!prefersReducedMotion && typeof VANTA !== 'undefined' && VANTA.NET) {
             vantaNetEffect = VANTA.NET({
                 el: '#home',
                 mouseControls: true,
