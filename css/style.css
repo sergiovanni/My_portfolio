@@ -16,7 +16,7 @@
 
 /* ─── Light theme — surfaces inversées, primary recalé pour la lisibilité ─── */
 :root[data-theme="light"] {
-    --primary: #0090c9;
+    --primary: #00729f;
     --dark: #eef1f6;
     --dark-2: #e5e9f0;
     --dark-3: #dbe1e9;
@@ -24,8 +24,8 @@
     --muted: #5b6572;
     --glass: rgba(15, 23, 42, 0.045);
     --glass-border: rgba(0, 150, 200, 0.25);
-    --glow: 0 0 20px rgba(0, 144, 201, 0.3);
-    --glow-strong: 0 0 40px rgba(0, 144, 201, 0.5);
+    --glow: 0 0 20px rgba(0, 114, 159, 0.3);
+    --glow-strong: 0 0 40px rgba(0, 114, 159, 0.5);
 }
 
 * { box-sizing: border-box; }
@@ -63,8 +63,10 @@ body {
     color: var(--light);
     background-color: var(--dark);
     overflow-x: hidden;
-    cursor: none;
 }
+
+/* Curseur natif masqué seulement quand le curseur custom est actif (classe posée par le JS) */
+body.has-custom-cursor { cursor: none; }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
@@ -1919,3 +1921,26 @@ section, .container-fluid, .container-xxl {
 .timeline-missions li { margin-bottom: 3px; }
 .timeline-missions li::marker { color: var(--primary); }
 .ai-skills-card { margin-top: 1.5rem; }
+
+/* ─── Accessibilité : focus clavier visible ─── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* ─── Accessibilité : respect de « réduire les animations » ─── */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    .tech-marquee-track { animation: none !important; transform: none !important; }
+    .cursor, .cursor-follower { display: none !important; }
+    body.has-custom-cursor { cursor: auto; }
+}

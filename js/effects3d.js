@@ -22,7 +22,8 @@
     ══════════════════════════════════════════ */
     var isTouchOrSmallScreen = window.matchMedia('(max-width: 991.98px), (hover: none) and (pointer: coarse)').matches;
 
-    if (!isTouchOrSmallScreen) {
+    if (!isTouchOrSmallScreen && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('has-custom-cursor');
         var cursor = document.querySelector('.cursor');
         var follower = document.querySelector('.cursor-follower');
         var mouseX = window.innerWidth / 2;
