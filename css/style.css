@@ -1111,7 +1111,7 @@ a { color: var(--primary); text-decoration: none; }
 
 /* ─── Skills ─── */
 #skill { background: var(--dark); padding: 6rem 0; }
-#skill h1.display-5 { color: var(--light); margin-bottom: 0.5rem; }
+#skill h2.display-5 { color: var(--light); margin-bottom: 0.5rem; }
 #skill p { color: var(--muted); line-height: 1.8; }
 
 /* ── Soft skills ── */
@@ -1339,7 +1339,7 @@ a { color: var(--primary); text-decoration: none; }
 
 /* ─── Services ─── */
 #service { background: var(--dark); padding: 5rem 0; }
-#service h1.display-5 { color: var(--light); }
+#service h2.display-5 { color: var(--light); }
 
 .service-item {
     background: var(--dark-3) !important;
@@ -1502,7 +1502,7 @@ a { color: var(--primary); text-decoration: none; }
 
 /* ─── Projects ─── */
 #project { background: var(--dark); padding: 6rem 0 5rem; }
-#project h1.display-5 { color: var(--light); }
+#project h2.display-5 { color: var(--light); }
 
 #portfolio-flters {
     display: flex;
@@ -1663,7 +1663,7 @@ a { color: var(--primary); text-decoration: none; }
 
 /* ─── Team / Interests ─── */
 #team { background: var(--dark-2); padding: 6rem 0 5rem; }
-#team h1.display-5 { color: var(--light); }
+#team h2.display-5 { color: var(--light); }
 
 .team-item {
     border-radius: 18px;
@@ -1719,7 +1719,7 @@ a { color: var(--primary); text-decoration: none; }
 
 /* ─── Testimonials ─── */
 #testimonial { background: var(--dark); padding: 5rem 0; }
-#testimonial h1.display-5 { color: var(--light); }
+#testimonial h2.display-5 { color: var(--light); }
 
 .testimonial-left, .testimonial-right { position: relative; }
 
@@ -1814,7 +1814,7 @@ a { color: var(--primary); text-decoration: none; }
 
 /* ─── Contact ─── */
 #contact { background: var(--dark-2); padding: 6rem 0 5rem; }
-#contact h1.display-5 { color: var(--light); }
+#contact h2.display-5 { color: var(--light); }
 #contact .fw-bold { color: var(--light); font-size: 1.2rem; }
 #contact p { color: var(--muted); margin-bottom: 6px; font-size: 0.9rem; }
 #contact hr { border-color: var(--glass-border); opacity: 1; }

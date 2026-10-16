@@ -404,7 +404,7 @@
     /* ── SKILLS ───────────────────────────────── */
     var skillTl = gsap.timeline({ scrollTrigger: st('#skill', 'top 78%') });
     skillTl
-        .from('#skill h1.display-5',   { opacity: 0, x: -50, duration: 0.8 })
+        .from('#skill h2.display-5',   { opacity: 0, x: -50, duration: 0.8 })
         .from('#skill p',              { opacity: 0, y: 18,  duration: 0.6 }, '-=0.4')
         .from('.soft-skills-card-title', { opacity: 0, x: -25, duration: 0.6 }, '-=0.3')
         .fromTo('.soft-skill-row',
@@ -424,7 +424,7 @@
 
 
     /* ── SERVICES ─────────────────────────────── */
-    gsap.from('#service .row.g-5.mb-5 h1', {
+    gsap.from('#service .row.g-5.mb-5 h2', {
         scrollTrigger: st('#service', 'top 82%'),
         opacity: 0, y: 30, duration: 0.8
     });
@@ -435,7 +435,7 @@
 
 
     /* ── PROJECTS ─────────────────────────────── */
-    gsap.from('#project h1', {
+    gsap.from('#project h2', {
         scrollTrigger: st('#project', 'top 82%'),
         opacity: 0, y: 30, duration: 0.8
     });
@@ -456,7 +456,7 @@
 
 
     /* ── TEAM / CENTRES D'INTÉRÊT ─────────────── */
-    gsap.from('#team h1', {
+    gsap.from('#team h2', {
         scrollTrigger: st('#team', 'top 82%'),
         opacity: 0, y: 30, duration: 0.8
     });
@@ -476,7 +476,7 @@
 
 
     /* ── TESTIMONIALS ─────────────────────────── */
-    gsap.from('#testimonial h1', {
+    gsap.from('#testimonial h2', {
         scrollTrigger: st('#testimonial', 'top 82%'),
         opacity: 0, y: 30, duration: 0.8
     });
@@ -495,7 +495,7 @@
 
 
     /* ── CONTACT ──────────────────────────────── */
-    gsap.from('#contact h1', {
+    gsap.from('#contact h2', {
         scrollTrigger: st('#contact', 'top 82%'),
         opacity: 0, y: 30, duration: 0.8
     });
