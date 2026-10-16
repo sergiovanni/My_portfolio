@@ -1543,8 +1543,15 @@ a { color: var(--primary); text-decoration: none; }
     box-shadow: 0 6px 20px rgba(0, 212, 255, 0.25);
 }
 
+/* Grille projets — la colonne (.portfolio-item) porte l'espacement,
+   la carte intérieure (.portfolio-card) porte le visuel. */
+.portfolio-container { --bs-gutter-x: 2rem; --bs-gutter-y: 0; }
+.portfolio-item { margin-bottom: 2rem; }
+.portfolio-card .portfolio-img { border-radius: 0 !important; }
+
 /* Carte projet — conteneur unifié */
-.portfolio-item {
+.portfolio-card {
+    height: 100%;
     border: 1px solid var(--glass-border);
     border-radius: 18px;
     overflow: hidden;
@@ -1552,7 +1559,7 @@ a { color: var(--primary); text-decoration: none; }
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover .portfolio-card {
     transform: translateY(-10px);
     box-shadow: 0 24px 60px rgba(0, 212, 255, 0.16);
     border-color: rgba(0, 212, 255, 0.4);

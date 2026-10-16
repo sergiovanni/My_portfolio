@@ -112,10 +112,13 @@
                     <div class="typed-text d-none" data-i18n-typed="hero.typed">Data Analyst - Développeur Full-Stack</div>
                     <div class="d-flex align-items-center pt-5">
                         <a href="assets/CV-Sergio_HOUNSOU.pdf" class="btn btn-primary py-3 px-4 me-5" data-i18n="hero.download" download>Télécharger CV</a>
+                        <!-- Bouton vidéo masqué en attendant la vidéo de présentation.
+                             Pour le réactiver : décommenter et remplacer l'ID YouTube dans data-src.
                         <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                         <h5 class="ms-4 mb-0 d-none d-sm-block" data-i18n="hero.play">Play</h5>
+                        -->
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -800,77 +803,89 @@
             </div>
             <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="portfolio-icon-btn" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                    <div class="portfolio-card">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/project-2.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="portfolio-icon-btn" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-caption">
-                        <h5 class="mb-1" data-i18n="projects.kpayroll">K-Payroll</h5>
-                        <small class="text-muted" data-i18n="projects.kpayroll.stack">Django, Vue.js, MySQL</small>
+                        <div class="portfolio-caption">
+                            <h5 class="mb-1" data-i18n="projects.kpayroll">K-Payroll</h5>
+                            <small class="text-muted" data-i18n="projects.kpayroll.stack">Django, Vue.js, MySQL</small>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="portfolio-icon-btn" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                    <div class="portfolio-card">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/project-2.jpg" alt="">
+                            <div class="portfolio-btn">
+                                <a class="portfolio-icon-btn" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-caption">
-                        <h5 class="mb-1" data-i18n="projects.kprospects">K-Prospects</h5>
-                        <small class="text-muted" data-i18n="projects.kprospects.stack">Laravel, Bootstrap, MySQL</small>
+                        <div class="portfolio-caption">
+                            <h5 class="mb-1" data-i18n="projects.kprospects">K-Prospects</h5>
+                            <small class="text-muted" data-i18n="projects.kprospects.stack">Laravel, Bootstrap, MySQL</small>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/Logo_GFC.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="portfolio-icon-btn" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                    <div class="portfolio-card">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/Logo_GFC.png" alt="">
+                            <div class="portfolio-btn">
+                                <a class="portfolio-icon-btn" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-caption">
-                        <h5 class="mb-1" data-i18n="projects.gfc">Global Freedom Corporation</h5>
-                        <small class="text-muted" data-i18n="projects.gfc.stack">Laravel, Bootstrap</small>
+                        <div class="portfolio-caption">
+                            <h5 class="mb-1" data-i18n="projects.gfc">Global Freedom Corporation</h5>
+                            <small class="text-muted" data-i18n="projects.gfc.stack">Laravel, Bootstrap</small>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/e-gbavou.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="portfolio-icon-btn" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                    <div class="portfolio-card">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/e-gbavou.png" alt="">
+                            <div class="portfolio-btn">
+                                <a class="portfolio-icon-btn" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-caption">
-                        <h5 class="mb-1" data-i18n="projects.egbavou"> Réalisation de site types e-gbavou</h5>
-                        <small class="text-muted" data-i18n="projects.egbavou.stack">HTML, CSS, JavaScript</small>
+                        <div class="portfolio-caption">
+                            <h5 class="mb-1" data-i18n="projects.egbavou"> Réalisation de site types e-gbavou</h5>
+                            <small class="text-muted" data-i18n="projects.egbavou.stack">HTML, CSS, JavaScript</small>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/hiriondo.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="portfolio-icon-btn" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                    <div class="portfolio-card">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/hiriondo.png" alt="">
+                            <div class="portfolio-btn">
+                                <a class="portfolio-icon-btn" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-caption">
-                        <h5 class="mb-1" data-i18n="projects.university">Projet universitaire</h5>
-                        <small class="text-muted" data-i18n="projects.university.stack">UML, MySQL, documentation</small>
+                        <div class="portfolio-caption">
+                            <h5 class="mb-1" data-i18n="projects.university">Projet universitaire</h5>
+                            <small class="text-muted" data-i18n="projects.university.stack">UML, MySQL, documentation</small>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
-                    </div>
-                    <div class="portfolio-caption">
-                        <h5 class="mb-1" data-i18n="projects.portfolio">Portfolio personnel</h5>
-                        <small class="text-muted" data-i18n="projects.portfolio.stack">HTML, CSS, JavaScript</small>
+                    <div class="portfolio-card">
+                        <div class="portfolio-img rounded overflow-hidden">
+                            <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        </div>
+                        <div class="portfolio-caption">
+                            <h5 class="mb-1" data-i18n="projects.portfolio">Portfolio personnel</h5>
+                            <small class="text-muted" data-i18n="projects.portfolio.stack">HTML, CSS, JavaScript</small>
+                        </div>
                     </div>
                 </div>
             </div>
