@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css?v=55" rel="stylesheet">
+    <link href="css/style.css?v=57" rel="stylesheet">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -78,7 +78,7 @@
             <div class="navbar-nav me-auto py-0">
                 <a href="#project" class="nav-item nav-link" data-i18n="nav.projects">Projects</a>
                 <a href="#team" class="nav-item nav-link" data-i18n="nav.team">Interests</a>
-                <a href="#testimonial" class="nav-item nav-link" data-i18n="nav.testimonial">What I Bring</a>
+                <!-- <a href="#testimonial" class="nav-item nav-link" data-i18n="nav.testimonial">What I Bring</a> -->
                 <a href="#contact" class="nav-item nav-link" data-i18n="nav.contact">Contact</a>
             </div>
 
@@ -814,10 +814,9 @@
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-card">
                         <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="img/project-2.jpg" alt="">
+                            <img class="img-fluid" src="img/project-2.jpg" alt="K-Payroll" loading="lazy">
                             <div class="portfolio-btn">
-                                <a class="portfolio-icon-btn" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                                <a class="portfolio-icon-btn" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
@@ -832,12 +831,11 @@
                             <img class="img-fluid" src="img/project-2.jpg" alt="">
                             <div class="portfolio-btn">
                                 <a class="portfolio-icon-btn" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
-                            <h5 class="mb-1" data-i18n="projects.kprospects">K-Prospects</h5>
-                            <small class="text-muted" data-i18n="projects.kprospects.stack">Laravel, Bootstrap, MySQL</small>
+                            <h5 class="mb-1" data-i18n="projects.kprospects">K-Prospect</h5>
+                            <small class="text-muted" data-i18n="projects.kprospects.stack">FastAPI, React.js, MySQL</small>
                         </div>
                     </div>
                 </div>
@@ -846,13 +844,12 @@
                         <div class="portfolio-img rounded overflow-hidden">
                             <img class="img-fluid" src="img/Logo_GFC.png" alt="">
                             <div class="portfolio-btn">
-                                <a class="portfolio-icon-btn" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                                <a class="portfolio-icon-btn" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
                             <h5 class="mb-1" data-i18n="projects.gfc">Global Freedom Corporation</h5>
-                            <small class="text-muted" data-i18n="projects.gfc.stack">Laravel, Bootstrap</small>
+                            <small class="text-muted" data-i18n="projects.gfc.stack">Python, SQL, Power BI</small>
                         </div>
                     </div>
                 </div>
@@ -861,8 +858,7 @@
                         <div class="portfolio-img rounded overflow-hidden">
                             <img class="img-fluid" src="img/e-gbavou.png" alt="">
                             <div class="portfolio-btn">
-                                <a class="portfolio-icon-btn" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                                <a class="portfolio-icon-btn" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
@@ -876,8 +872,7 @@
                         <div class="portfolio-img rounded overflow-hidden">
                             <img class="img-fluid" src="img/Hiriondo.png" alt="">
                             <div class="portfolio-btn">
-                                <a class="portfolio-icon-btn" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="portfolio-icon-btn" href="https://github.com/sergiovanni" target="_blank" rel="noopener"><i class="fa fa-link"></i></a>
+                                <a class="portfolio-icon-btn" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
@@ -974,8 +969,8 @@
     <!-- CTA Banner End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+    <!-- Testimonial Start (masquée : retirer l'attribut "hidden" et réactiver le lien du menu quand de vrais témoignages seront disponibles) -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial" hidden>
         <div class="container-fluid py-5">
             <h2 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" data-i18n="testimonial.title">Ce que j'apporte</h2>
             <div class="row justify-content-center">
@@ -1164,7 +1159,7 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js?v=13"></script>
+    <script src="js/main.js?v=14"></script>
 
     <!-- 3D Effects Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -1172,7 +1167,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/effects3d.js?v=24"></script>
+    <script src="js/effects3d.js?v=25"></script>
 </body>
 
 </html>
