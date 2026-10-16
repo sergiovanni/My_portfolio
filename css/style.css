@@ -1327,20 +1327,6 @@ a { color: var(--primary); text-decoration: none; }
     gap: 6px;
 }
 
-.timeline-desc {
-    color: var(--muted);
-    font-size: 0.82rem;
-    line-height: 1.5;
-    margin: 8px 0 0;
-}
-
-.hero-rhythm {
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-.hero-rhythm i { color: var(--primary); }
-
 .timeline-company::before {
     content: '';
     width: 5px;
